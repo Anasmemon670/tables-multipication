@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABLES PROJECT</title>
+</head>
+<body>
+    <style>
+        body{
+            background-image: linear-gradient(to right bottom , black , darkslategray  , gray , black , gray , darkslategray , black);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            color: snow;
+            /* font-family: sans-serif; */
+        }
+        .header{
+            display: flex;
+            /* justify-content: center; */
+            margin-top: 120px;
+            margin-left: 230px;
+
+        }
+        .tablesall{
+            /* width: 400px;
+            height: 400px;
+            background-color: black;
+            color: snow; */
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            /* margin-left: 280px; */
+
+        }
+        .id > h3{
+            text-transform: capitalize;
+            font-family: "Monotype Corsiva";
+            text-align: center;
+            font-size: 30px;
+            padding-top: 5px;
+            /* font-weight: 700; */
+            /* padding-bottom: 33px; */
+        }
+        .id{
+            width: 400px;
+            height: 400px;
+            /* background-color: black; */
+            background-image: linear-gradient(to right bottom , black , black );
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: snow;
+            margin-left: 100px;
+            border-radius: 20px;
+            box-shadow: 5px 10px 10px snow;
+            /* text-align: center; */
+            /* align-items: center; */
+
+
+        }
+        .table2{
+            padding-left: 113px;
+            /* padding-top: 10px; */
+            
+        }
+        th , td {
+            border: 1px solid black;
+            font-size: 14px;
+            padding: 5px 10px;
+            font-weight: 700;
+        }
+        .tab1 , .tab2 {
+            width: 150px;
+            height: 22px;
+            border-radius: 10px;
+            border: none;
+            /* display: inline block; */
+            /* font-family: "Monotype Corsiva"; */
+            cursor: grab;
+            /* display: flex; */
+            /* padding: 10px; */
+            font-size: 11px;
+            font-weight: 500;
+        }
+        label{
+            text-transform: capitalize;
+            font-family: "Monotype Corsiva";
+            text-align: center;
+            /* padding-left: 50px; */
+        }
+        .maincontainer{
+            background-image: linear-gradient(to right bottom , black , black );
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 400px;
+            height: 400px;
+            border-radius: 20px;
+            box-shadow: 5px 10px 10px snow;
+            display: flex;
+            justify-content: center;
+            cursor: wait;
+        }
+        .mainitem{
+            /* display: flex;
+            justify-content: center; */
+            align-items: center;
+        }
+        .alltablechecker{
+            text-transform: capitalize;
+            font-family: "Monotype Corsiva";
+            text-align: center;
+            font-size: 20px;
+            padding-top: 5px;
+            padding-bottom: 33px;
+
+        }
+        .self{
+            border: none;
+            cursor: no-drop;
+            border-radius: 10px;
+            width: 120px;
+            height: 30px;
+            font-family: "Monotype Corsiva";
+            font-weight: 800;
+            font-size: 20px;
+            background-color: darkslategray;
+            color: snow;
+            letter-spacing: 2px;
+           
+
+        }
+        .self:hover{
+            color: black;
+            background-color: snow;
+            /* box-decoration-break: slice; */
+            box-shadow: 5px 10px 10px snow;
+            border: 1px solid black;
+            /* backdrop-filter: blur(15px); */
+            /* text-overflow: clip; */
+        }
+
+    </style>
+<header class="header">
+        <div class="maincontainer">
+           <div class="mainitem">
+                <div class="alltablechecker">
+                        <h2>all mathamatics <br>tables checker</h2>
+                </div>
+                <label for="tab1">
+                        input the table : <input type="number" class="tab1" placeholder="Enter Your Table Number">
+    <br>
+    <br>
+
+                <label for="tab2">
+                        input the table : <input type="number"  class="tab2" placeholder="Enter How Many Times to Multiply">
+                </label>
+    <br>
+    <br>
+    <br>
+                        <button onclick="table1all()" class="self">check</button>
+            </div>
+        </div>   
+                <!-- <div class="">            
+                         <button onclick="table1all()" class="button">check</button> 
+                </div>          -->
+    <br>                    
+    <br>
+                <div class="tablesall">
+                    <div class="id">
+                        <h3 contenteditable="true">multipication table</h3>
+                         <!-- <p contenteditable="true">multipication table</p> -->
+                        <table class="table2">
+                        </table>
+                    </div>    
+                </div>        
+    <br>
+    <br>
+</header>       
+    
+
+
+
+
+
+
+
+
+    <script>
+    //     let tr =""
+    //     function tablesall(){
+    //     for(let i=1; i <= 10; i++){
+    //         tr += `<tr><td>2</td><td>x</td><td>${i}</td><td>=</td><td>${2 * i}</td></tr>`;
+    //     }
+    //     document.querySelector(".table2").innerHTML = tr; 
+
+    // }
+    let result = ""
+    function table1all(){
+        let user1 = parseFloat(document.querySelector(".tab1").value);
+        let user2 = parseFloat(document.querySelector(".tab2").value);
+        for(let i = 1; i <= user2; i++){
+            result += `<tr><td>${user1}</td><td>x</td><td>${i}</td><td>=</td><td>${user1 * i}</td></tr>`;
+        }
+        document.querySelector(".table2").innerHTML = result; 
+    }
+
+    </script>
+</body>
+</html>
